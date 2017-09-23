@@ -40,8 +40,8 @@ def tsv2rbv(t,s,v):
 	elif ti==5:
 		return [v,l,m]
 
-for r in range(360):
-	color=tsv2rbv(float(r),1.,0.5)
+for r in range(0,720,1):
+	color=tsv2rbv(float(r%360),1.,1.)
 	sense.set_pixels(getPixels(color))
 	time.sleep(0.01)
 
